@@ -6,8 +6,8 @@ RPC connections
 <--> MSRPC on port TCP/135 (ncacn_ip_tcp)
 <--> MSRPC on port UDP/135 (ncadg_ip_udp)
 <--> MSRPC over HTTPS on port TCP/593 (ncacn_http) 
-<--> MSRPC over SMB Named Pipe on port TCP/445 (ncacn_np)  					-> Specific named pipes below
-<--> MSRPC over SMB Named Pipe over NetBios on port TCP/139 (ncacn_np)   	-> Specific named pipes below
+<--> MSRPC over SMB Named Pipe on port TCP/445 (ncacn_np)
+<--> MSRPC over SMB Named Pipe over NetBios on port TCP/139 (ncacn_np)
 <--> MSRPC over ALPC (ncalrpc)
 
 ==================
