@@ -1,0 +1,57 @@
+
+
+===============
+RPC connections
+===============
+<--> MSRPC on port TCP/135 (ncacn_ip_tcp)
+<--> MSRPC on port UDP/135 (ncadg_ip_udp)
+<--> MSRPC over HTTPS on port TCP/593 (ncacn_http) 
+<--> MSRPC over SMB Named Pipe on port TCP/445 (ncacn_np)  					-> Specific named pipes below
+<--> MSRPC over SMB Named Pipe over NetBios on port TCP/139 (ncacn_np)   	-> Specific named pipes below
+<--> MSRPC over ALPC (ncalrpc)
+
+==================
+Impacket protocols
+==================
+
+	==================
+	wmiexec / dcomexec
+	==================
+	SMB Named Pipe "\pipe\epmapper"
+
+	==================================
+	psexec / smbexec (remote services)
+	==================================
+	SMB Named Pipe "\pipe\svcctl"
+	SMB Named Pipe "\pipe\srvsvc"
+
+	=================================
+	samrdump (remote account manager)
+	=================================
+	SMB Named Pipe "\pipe\samr"
+
+	==================
+	dpapi (remote lsa)
+	==================
+	SMB Named Pipe "\pipe\lsarpc"
+
+	==============================
+	atexec (remote scheduled task)
+	==============================
+	SMB Named Pipe "\pipe\atsvc"
+
+	=====================
+	reg (remote registry)
+	=====================
+	SMB Named Pipe "\pipe\winreg"
+
+
+==========
+references
+==========
+https://github.dev/fortra/impacket
+https://www.thehacker.recipes/ad/recon/ms-rpc
+https://book.hacktricks.xyz/network-services-pentesting/135-pentesting-msrpc
+https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements
+https://csandker.io/2021/02/21/Offensive-Windows-IPC-2-RPC.html
+
